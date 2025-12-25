@@ -6,7 +6,5 @@ public class First {
          System.out.println("bye world");
           System.out.println("bye world");
            System.out.println("bye world");
-
-        
     }
 }
