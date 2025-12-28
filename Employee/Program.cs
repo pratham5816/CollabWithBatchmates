@@ -1,4 +1,7 @@
 
+using Employee.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace Employee
 {
     public class Program
@@ -14,7 +17,13 @@ namespace Employee
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services.AddDbContext<ApplicationDbContext>
+            (options => 
+                options.UseSqlServer
+                (builder.Configuration.GetConnectionString("DefaultConnection"))
+            );
             var app = builder.Build();
+           
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Employee.Model.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Employee.Data
 {
@@ -6,7 +7,12 @@ namespace Employee.Data
     {
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
-            
+
         }
+
+        public DbSet<MyEmployee> Employees { get; set; }
+
+
+
     }
 }

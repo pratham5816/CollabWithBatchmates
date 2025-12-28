@@ -1,6 +1,6 @@
 ﻿namespace Employee.Model.Entities
 {
-    public class Employee
+    public class MyEmployee
     {
         
         public int Id { get; set; }
