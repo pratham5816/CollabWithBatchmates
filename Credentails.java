@@ -7,5 +7,8 @@ public class Credentails {
 
         System.out.println("");
         System.out.println("hey");
+        int x = 110;
+        int y = 11;
+        System.out.println(x/y);
     }
 }
